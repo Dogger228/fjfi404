@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0Q4ZCYHBF1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0Q4ZCYHBF1');
+</script>
+
+
+
+
+
+
+
+<meta charset="UTF-8">
+<title>Институт ФЯФИ</title>
+<link rel="icon" type="img/png" href="img/favicon.png">
+
+
+<div class="radiation-status">
+  <span class="rad-dot"></span> РАДИАЦИОННЫЙ ФОН: <span id="rad-value">0.14</span> мкЗв/ч (НОРМА)
+</div>
+
+
+
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/snow.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+<script src="https://cdn.jsdelivr.net/gh/Alaev-Co/snowflakes/dist/Snow.min.js"></script>
+<script>
+	new Snow ();
+</script>
+
+
+<header>
+
+  <div class="marquee">
+    <div class="marquee-content">🏫 ВСЕХ С НАСТУПАЮЩИМ ДНЕМ ФЛАГА 🏫</div>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="https://edu.fjfi.cvut.cz/edu/BK/BK_2026_2027_final.pdf" target="_blank">Белая кНИГА</a></li>
+    <a href="#" id="studlink">СТУДИЙКА+БИБЛ</a>
+    <li><a href="https://t.me/cvut_fjfi" target="_blank">Telegram</a></li>
+    <li><a href="#" id="veterans-link">Ветераны</a></li>
+<li>
+  <button id="donate-btn" style="
+      background: #ff3300;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 18px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: 2px solid #ffffff;
+      cursor: pointer;
+      animation: blink 1s infinite;
+  ">ДОНАТ</button>
+</li>
+    <li><a href="#" id="igra">X</a></li>
+  </ul>
+</nav>
+
+
+
+<div class="main-wrapper"> 
+<div class="banner-block"> 
+	<img src="gif/G.gif" alt="G1" style="width:160px; height:300px;"> 
+
+<div class="video-box">
+    <video width="160" height="90" controls autoplay muted loop style="margin-top: 10px; border: 2px solid #fff; border-radius: 8px;">
+      <source src="video/sample.mp4" type="video/mp4">
+      Ваш браузер не поддерживает видео.
+    </video>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="central-block" id="central-block">
+  <h2>Добро пожаловать!</h2>
+  <button class="btn" id="schedule-btn">Расписания пар</button>
+  <button class="btn" id="schedulejaz-btn">Расписания языков</button>
+  <button class="btn" id="praktiki-btn">Практики</button>
+  <button class="btn" id="predmety-btn">Предметы</button>
+  <h4>Pokud nesouhlasíte s použitím vašich materiálů, obraťte se na e-mail: jadernydead@gmail.com</h4>
+</div>
+
+  <div class="chat-block">
+    <h3>Чат</h3>
+    <div class="chat-box" id="chat-box"></div>
+    <input type="text" id="nickname" placeholder="Ваш ник">
+    <input type="text" id="message" placeholder="Сообщение">
+    <button id="sendBtn" class="btn">Отправить</button>
+  </div>
+</div>
+
+<footer style="display: flex; justify-content: space-between; align-items: center; padding: 5px; background: rgba(0,0,128,0.8); border-top: 2px solid #ff9900;">
+
+  <!-- Баннер слева -->
+  <div style="width: 468px; height: 60px; overflow: hidden; margin-left: 250px;">
+    <script type="text/javascript">
+      atOptions = {
+        'key' : '69fbd741524f6eb0e5386b6386fd4cf7',
+        'format' : 'iframe',
+        'height' : 60,
+        'width' : 468,
+        'params' : {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/69fbd741524f6eb0e5386b6386fd4cf7/invoke.js"></script>
+  </div>
+
+  <!-- Контейнер справа: счетчик + кнопка -->
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <div id="goida-counter" style="color:#ffff00; font-weight:bold; font-size:16px;">
+      ГОЙДА: 0
+    </div>
+    <button id="goida-btn" style="background:#ff9900; color:#000033; font-weight:bold; border:2px solid #ffff00; padding:10px 20px; cursor:pointer; border-radius:5px;">
+      ГОЙДА
+    </button>
+  </div>
+
+  <!-- Скрытый аудио элемент для звука -->
+  <audio id="goida-sound" src="https://www.myinstants.com/media/sounds/goida.mp3"></audio>
+</footer>
+
+</script>
+  <script src="script.js"></script>
+
+
+
+<!--<div id="bear-fixed">
+  <img src="gif/C.gif" alt="Dancing bear">
+</div> -->
+
+</body>
+</html>
