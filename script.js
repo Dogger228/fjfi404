@@ -67,25 +67,6 @@ setInterval(() => {
   }
 }, 3000);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // ===== Firebase =====
 const firebaseConfig = {
   apiKey: "AIzaSyBxNTmQR9HKfi1iz_piobs_MgnLIetmSnc",
@@ -582,10 +563,10 @@ const pdfPaths = {
 
 
 const windowA = `<h2>Добро пожаловать!</h2>
-<button class="btn" id="schedule-btn">Расписания пар</button>
-<button class="btn" id="schedulejaz-btn">Расписания языков</button>
-<button class="btn" id="praktiki-btn">Практики</button>
-<button class="btn" id="predmety-btn">Предметы</button>`;
+<button class="btn btn-full" id="schedule-btn">Расписания пар</button>
+<button class="btn btn-full" id="schedulejaz-btn">Расписания языков</button>
+<button class="btn btn-full" id="praktiki-btn">Практики</button>
+<button class="btn btn-full" id="predmety-btn">Предметы</button>`;
 // Функция для показа картинки ветеранов
 function showVeterans() {
   centralBlock.innerHTML = `<h2>Ветераны</h2>`;
@@ -598,7 +579,7 @@ function showVeterans() {
   centralBlock.appendChild(img);
 
   const backBtn = document.createElement('button');
-  backBtn.className = 'btn';
+  backBtn.className = 'btn btn-full';
   backBtn.textContent = 'Назад';
   backBtn.style.marginTop = '15px';
   backBtn.onclick = () => centralBlock.innerHTML = windowA;
@@ -616,13 +597,13 @@ function showWindowB() {
   centralBlock.innerHTML = `<h2>Практики</h2>`;
   Object.keys(groups).forEach(group=>{
     const btn=document.createElement('button');
-    btn.className='btn';
+    btn.className='btn btn-full';
     btn.textContent=group;
     btn.onclick=()=>showGroupProtocols(group);
     centralBlock.appendChild(btn);
   });
   const backBtn=document.createElement('button');
-  backBtn.className='btn';
+  backBtn.className='btn btn-full';
   backBtn.textContent='Назад';
   backBtn.onclick=()=>centralBlock.innerHTML=windowA;
   centralBlock.appendChild(document.createElement('br'));
@@ -643,14 +624,14 @@ function showWindowC() {
 
   years.forEach(y => {
     const btn = document.createElement('button');
-    btn.className = 'btn';
+    btn.className = 'btn btn-full';
     btn.textContent = y.text;
     btn.onclick = () => showSubjects(y.subjects);
     centralBlock.appendChild(btn);
   });
 
   const backBtn = document.createElement('button');
-  backBtn.className = 'btn';
+  backBtn.className = 'btn btn-full';
   backBtn.textContent = 'Назад';
   backBtn.style.marginTop = '15px';
   backBtn.onclick = () => centralBlock.innerHTML = windowA;
@@ -723,7 +704,7 @@ function showSubjects(subjects) {
 
   // Кнопка назад к предыдущему окну
   const backBtn = document.createElement('button');
-  backBtn.className = 'btn';
+  backBtn.className = 'btn btn-full';
   backBtn.textContent = 'Назад';
   backBtn.style.marginTop = '15px';
   backBtn.onclick = () => showWindowC(); 
@@ -753,7 +734,7 @@ function showSubjectLinks(subject, subjects) {
 
   // Кнопка назад к списку предметов
   const backBtn = document.createElement('button');
-  backBtn.className = 'btn';
+  backBtn.className = 'btn btn-full';
   backBtn.style.marginTop = '15px';
   backBtn.textContent = 'Назад';
   backBtn.onclick = () => showSubjects(subjects);
@@ -766,13 +747,13 @@ function showGroupProtocols(group){
   centralBlock.innerHTML=`<h2>${group}</h2><p>Выберите протокол:</p>`;
   groups[group].forEach(file=>{
     const btn=document.createElement('button');
-    btn.className='btn';
+    btn.className='btn btn-full';
     btn.textContent=file;
     btn.onclick=()=>showPdfWindow(group,file);
     centralBlock.appendChild(btn);
   });
   const backBtn=document.createElement('button');
-  backBtn.className='btn';
+  backBtn.className='btn btn-full';
   backBtn.textContent='Назад';
   backBtn.style.marginTop='15px';
   backBtn.onclick=()=>showWindowB();
@@ -851,7 +832,7 @@ function showPdfWindow(group, file, returnToMain = false) {
 
   // ----- кнопка Назад -----
   const backBtn = document.createElement('button');
-  backBtn.className = 'btn';
+  backBtn.className = 'btn btn-full';
   backBtn.textContent = 'Назад';
   backBtn.style.marginTop = '15px';
   backBtn.onclick = () => {
@@ -879,14 +860,14 @@ function showScheduleWindow2() {
 
   schedules.forEach(s=>{
     const btn = document.createElement('button');
-    btn.className = 'btn';
+    btn.className = 'btn btn-full';
     btn.textContent = s.text;
     btn.onclick = () => window.open(s.link, '_blank'); // открытие в новой вкладке
     centralBlock.appendChild(btn);
   });
 
   const backBtn=document.createElement('button');
-  backBtn.className='btn';
+  backBtn.className='btn btn-full';
   backBtn.textContent='Назад';
   backBtn.style.marginTop='15px';
   backBtn.onclick = () => centralBlock.innerHTML = windowA;
@@ -908,14 +889,14 @@ function showScheduleWindow() {
 
   schedules.forEach(s=>{
     const btn = document.createElement('button');
-    btn.className = 'btn';
+    btn.className = 'btn btn-full';
     btn.textContent = s.text;
     btn.onclick = () => window.open(s.link, '_blank'); // открытие в новой вкладке
     centralBlock.appendChild(btn);
   });
 
   const backBtn=document.createElement('button');
-  backBtn.className='btn';
+  backBtn.className='btn btn-full';
   backBtn.textContent='Назад';
   backBtn.style.marginTop='15px';
   backBtn.onclick = () => centralBlock.innerHTML = windowA;

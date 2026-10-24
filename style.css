@@ -124,7 +124,9 @@ nav a:hover {
 
 /* Центральный блок с ядерным свечением */
 .central-block {
-  flex: 2;
+  flex: 1 1 500px;
+  max-width: 600px;
+  width: 100%;
   background-color: rgba(0, 0, 51, 0.75);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -135,13 +137,9 @@ nav a:hover {
   height: 100%;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
   box-sizing: border-box;
   animation: radioactive-pulse 2.5s infinite ease-in-out;
 }
-
-
-
 
 .radiation-status {
   font-family: monospace;
@@ -164,31 +162,6 @@ nav a:hover {
   margin-right: 5px;
   animation: blink 1s infinite;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ===== СТИЛЬ ТЕРМИНАЛА ДЛЯ ЧАТА ===== */
 .chat-block {
@@ -241,6 +214,7 @@ body::after {
   pointer-events: none;
   z-index: 999;
 }
+
 /* ===== 4. ИНТЕРАКТИВНЫЕ КНОПКИ И ВВОД ===== */
 .btn {
   display: inline-block;
@@ -359,4 +333,33 @@ p { line-height: 1.6; }
     width: 100% !important;
     height: 50% !important;
   }
+}
+
+/* Базовые стили центрального блока и кнопок (из прошлого шага) */
+.central-block {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.central-block > *:not(.btn) {
+  grid-column: 1 / -1;
+}
+
+.central-block .btn {
+  grid-column: span 1;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 10px 4px;
+  text-align: center;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ===== НОВОЕ: Кнопка на всю ширину ===== */
+.central-block .btn.btn-full {
+  grid-column: 1 / -1; /* Растягивает кнопку на все 5 колонок */
 }
