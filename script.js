@@ -350,6 +350,13 @@ const subjectLinks = {
   "UJRF": [
     { label: "ССЫЛКА 1", url: "https://drive.google.com/drive/folders/1bQAHxWEtRp0EIBJiILGZZkkzr7R0RMrE" }
   ],
+  "UČ": [
+    { label: "UČ1", url: "https://drive.google.com/drive/folders/1YFSgngNzMhBR_oFH9Vq4mVQBNVFS-WZA" },
+    { label: "UČ2", url: "https://drive.google.com/drive/folders/1dNfck2eoq-DSSnqwqxkTMotoEEKQc5H9" }
+  ],
+  "MTD": [
+    { label: "ССЫЛКА 1", url: "https://drive.google.com/drive/folders/1-wCCxNr28NRCDE_KvKi8nI_bwi2oyBed" }
+  ],
   "SF": [
     { label: "ССЫЛКА 1", url: "https://drive.google.com/drive/folders/1SOJC_grsDUXPQ9knTNK8sz87HdSYW9yR" }
   ],
@@ -630,7 +637,7 @@ function showWindowC() {
     { text: "1 год", subjects: ["ELMA","MECH","MAN","LAL","TER","UING","CHEMIE","DIM","UJRF","ZPP"] },
     { text: "2 год", subjects: ["TEF","TSFA","VOAF","ANB34\ANA34","DIFR","NMA","NME","UKP","STR","LCF","ZRIZ","ZOMED","ZJT","ZEL","ZDOZ","ZBAF"] },
     { text: "3 год", subjects: ["FKO","FAN","SF","RMF","PRST","GMF","KVAN","ZJF","DEM","ALGE","ZFP"] },
-    { text: "Магистр", subjects: ["KTPA","GTO","ZELW","VPJRS"]},
+    { text: "Магистр", subjects: ["KTPA","GTO","ZELW","VPJRS","MTD","UČ"]},
     { text: "Гуманитарная хуета", subjects: ["Языки","Право","Этика","Реторика"]}
   ];
 
